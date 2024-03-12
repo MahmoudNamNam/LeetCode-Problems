@@ -45,12 +45,12 @@ class Solution:
     
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        dict={}
+        numDict={}
         for i,n in enumerate(nums):
-            if n in dict:
-                return dict[n],i
+            if n in numDict:
+                return numDict[n],i
             else:
-                dict[target-n]=i
+                numDict[target-n]=i
 nums = [2, 7, 11, 15]
 target = 9
 
