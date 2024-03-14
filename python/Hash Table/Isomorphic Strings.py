@@ -17,3 +17,16 @@ def isIsomorphic(s, t):
 s = "egg"
 t = "add"
 print(isIsomorphic(s,t))
+'''
+Input: s = "egg", t = "add"
+Output: true
+Example 2:
+
+Input: s = "foo", t = "bar"
+Output: false
+Example 3:
+
+Input: s = "paper", t = "title"
+Output: true
+
+'''
