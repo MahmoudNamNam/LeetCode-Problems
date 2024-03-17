@@ -1,5 +1,5 @@
 class Solution:
-    def minJumps(self, arr, n):
+    def minJumps(self, arr):
         """
         Calculates the minimum number of jumps required to reach the end of the array.
 
@@ -44,3 +44,9 @@ class Solution:
                 steps = max_reachable - i  # Update steps to the difference between max_reachable and current index
     
         return -1  # If we can't reach the end of the array
+
+
+s = Solution()
+
+c= s.minJumps([2, 3, 1, 2, 4, 2, 1, 0, 3])
+print("Number of minimum jumps required : ",c)
