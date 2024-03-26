@@ -12,4 +12,3 @@ class Solution:
                 current = current.next  # Move to the next node
         
         return head  # Return the modified head of the list
-
