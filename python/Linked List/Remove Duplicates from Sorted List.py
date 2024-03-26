@@ -1,3 +1,10 @@
+from typing import Optional
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 class Solution:
     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if not head:
@@ -12,3 +19,39 @@ class Solution:
                 current = current.next  # Move to the next node
         
         return head  # Return the modified head of the list
+    
+
+
+
+# Helper function to create a linked list from a list of values
+def create_linked_list(values):
+    if not values:
+        return None
+    head = ListNode(values[0])
+    current = head
+    for val in values[1:]:
+        current.next = ListNode(val)
+        current = current.next
+    return head
+
+# Helper function to print linked list values
+def print_linked_list(head):
+    values = []
+    current = head
+    while current:
+        values.append(current.val)
+        current = current.next
+    print(values)
+
+# Test case
+values = [1, 1, 2, 3, 3]
+head = create_linked_list(values)
+
+print("Original Linked List:")
+print_linked_list(head)
+
+solution = Solution()
+result = solution.deleteDuplicates(head)
+
+print("Linked List after removing duplicates:")
+print_linked_list(result)
