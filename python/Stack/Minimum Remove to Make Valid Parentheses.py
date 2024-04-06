@@ -1,5 +1,14 @@
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
+        """
+        Removes the minimum number of parentheses to make the string valid.
+
+        Args:
+            s (str): The input string containing parentheses.
+
+        Returns:
+            str: The modified string with the minimum number of parentheses removed to make it valid.
+        """
         stack = []
         to_remove = set()
 
