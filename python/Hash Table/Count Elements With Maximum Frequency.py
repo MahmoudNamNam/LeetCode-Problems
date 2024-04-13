@@ -29,16 +29,13 @@ class Solution:
         
         # Count the elements with maximum frequency
         max_frequency_elements_count =0
-        for k, v in counts.items():
+        for v in counts.values():
             if v == max_frequency:
                 max_frequency_elements_count += 1
         
         # Return the result
         return max_frequency * max_frequency_elements_count
-nums = [1,2,2,3,1,4]        
-counts = Counter(nums)
-        # Find the maximum frequency
-max_frequency = max(counts.values())
-print(max_frequency)
+
+nums = [1,2,2,3,1,4]
 sol=Solution()
 print(sol.maxFrequencyElements(nums))
