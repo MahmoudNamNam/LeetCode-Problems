@@ -1,5 +1,5 @@
 class Solution:
-    def sumOfLeftLeaves(self, root: TreeNode) -> int:
+    def sumOfLeftLeaves(self, root) -> int:
         # Check if the root is None (empty tree)
         if not root:
             return 0
