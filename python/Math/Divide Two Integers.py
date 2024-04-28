@@ -11,7 +11,7 @@ class Solution:
     def divide2(self, dividend: int, divisor: int) -> int:
         if divisor == 0:
             raise ZeroDivisionError("Cannot divide by zero")
-
+        # Check if the dividend is the minimum possible value for a 32-bit signed integer
         if dividend == -2147483648 and divisor == -1:
             return 2147483647  # Special case to avoid overflow
 
