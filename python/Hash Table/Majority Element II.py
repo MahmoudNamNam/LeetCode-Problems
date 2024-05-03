@@ -1,6 +1,6 @@
 from typing import List
 from collections import Counter
-from math import ceil
+
 class Solution:
     def majorityElement(self, nums: List[int]) -> List[int]:
         cnt = Counter(nums)
