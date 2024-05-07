@@ -9,3 +9,4 @@ class Solution:
                 return [hash_sum[remaining],idx+1]
             else:
                 hash_sum[val]=idx+1
+        return []
