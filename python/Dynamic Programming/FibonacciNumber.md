@@ -47,7 +47,7 @@ The Fibonacci sequence can be approximated using Binet's formula:
  F(n) = \frac{{\phi^n - (1 - \phi)^n}}{\sqrt{5}}
  $$
 where  $\phi$ (the Golden Ratio) is:
-$phi = \frac{{1 + \sqrt{5}}}{2} $
+$\phi = \frac{{1 + \sqrt{5}}}{2} $
 
 For large values of  n ,  $(1 - \phi)^n $ becomes very small (since $(1 - \phi) $ is approximately -0.618) and can be ignored in the integer approximation. Therefore, the $n$ th Fibonacci number can be approximated as:
  $F(n) \approx \frac{{\phi^n}}{\sqrt{5}}$
