@@ -15,3 +15,4 @@ class Solution:
 
         return str(a * b)
     
+sol = Solution()
