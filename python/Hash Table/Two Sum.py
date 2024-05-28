@@ -42,7 +42,10 @@ class Solution:
                 return [num_dict[complement], i]
             num_dict[num] = i
         return []
-    
+
+
+
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         numDict={}
@@ -51,6 +54,8 @@ class Solution:
                 return numDict[n],i
             else:
                 numDict[target-n]=i
+
+
 nums = [2, 7, 11, 15]
 target = 9
 
