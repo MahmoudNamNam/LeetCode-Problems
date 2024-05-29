@@ -7,7 +7,7 @@ class Solution:
         counter = Counter(nums)
         cnt=0
         
-        for _,value in counter.items():
+        for value in counter.values():
             if value ==1:
                 return -1
             cnt+=(value//3)
