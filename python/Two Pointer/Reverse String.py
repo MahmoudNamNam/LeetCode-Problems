@@ -19,3 +19,7 @@ sol = Solution()
 s = ["H","a","n","n","a","h"]
 sol.reverseString(s)
 print(s)
+
+s = ["h","e","l","l","o"]
+sol.reverseString(s)
+print(s)
