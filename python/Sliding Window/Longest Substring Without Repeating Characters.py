@@ -19,21 +19,3 @@ class Solution:
 sol = Solution()
 print(sol.lengthOfLongestSubstring("pwwkew"))  # Output: 3
 
-
-
-#  Another Sol
-
-class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
-        max_count = 0
-        start = 0
-        seen = {}
-        for i in range(len(s)):
-            if s[i] in seen and seen[s[i]] >= start:
-                start = seen[s[i]] + 1
-            seen[s[i]] = i
-            max_count = max(max_count, i - start + 1)
-        return max_count
-
-sol = Solution()
-print(sol.lengthOfLongestSubstring("pwwkew"))
