@@ -1,26 +1,29 @@
 class Solution:
     def sort012(self, arr, n):
         """
-        Sorts an array containing 0s, 1s, and 2s in ascending order.
-        
-        Parameters:
-        - arr (list): The input array containing 0s, 1s, and 2s.
-        - n (int): The number of elements in the array.
-        
-        Returns:
-        - list: The sorted array.
-        
-        Dutch National Flag algorithm is used to solve this problem efficiently 
-        in O(n) time complexity. It sorts the array by partitioning it into three 
-        sections - 0s, 1s, and 2s, and moving elements to their correct positions.
-        
-        Example:
-        >>> solution = Solution()
-        >>> arr = [2, 1, 0, 1, 2, 0, 1]
-        >>> sorted_arr = solution.sort012(arr, len(arr))
-        >>> sorted_arr
-        [0, 0, 1, 1, 1, 2, 2]
+        To solve this problem efficiently with a one-pass algorithm and constant space, 
+        we can use the Dutch National Flag algorithm. 
+        This algorithm uses three pointers to sort the array in a single pass. 
+
+        Explanation:
+            Three Pointers:
+                low: This pointer is used to place the next 0.
+                mid: This pointer is used to explore the array.
+                high: This pointer is used to place the next 2.
+
+            Process:
+                Traverse the array with the mid pointer.
+                If nums[mid] is 0, swap it with nums[low] and increment both low and mid.
+                If nums[mid] is 1, just move the mid pointer.
+                If nums[mid] is 2, swap it with nums[high] and decrement high.
+
+            Termination:
+                The loop terminates when mid surpasses high.
         """
+
+
+
+
         low = 0
         high = n - 1
         mid = 0
