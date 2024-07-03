@@ -57,3 +57,6 @@ class Solution(object):
                 a = sum  # Update the maximum sum if the current sum is greater
 
         return a
+
+solution = Solution()
+print(solution.maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
