@@ -39,4 +39,4 @@ class Solution:
         
         return missing
 solution = Solution()
-print(solution.firstMissingPositive([7, 8, 9, 11, 12]))  # Output: 1
+print(solution.firstMissingPositive([3,4,-1,1]))  # Output: 1
