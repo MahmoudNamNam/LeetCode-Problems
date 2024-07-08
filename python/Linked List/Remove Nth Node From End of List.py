@@ -45,8 +45,8 @@ class Solution:
         first = dummy
         second = dummy
         
-        # Move first pointer n+1 steps ahead
-        for _ in range(n + 1):
+        # Move first pointer n steps ahead
+        for _ in range(n+1):
             first = first.next
         
         # Move both pointers until first reaches the end
@@ -60,3 +60,38 @@ class Solution:
         
         # Return the head of the modified list, which is dummy.next
         return dummy.next
+
+solution =Solution()
+
+def create_linked_list(values):
+    if not values:
+        return None
+    head = ListNode(values[0])
+    current = head
+    for val in values[1:]:
+        current.next = ListNode(val)
+        current = current.next
+    return head
+
+# Helper function to print linked list values
+def print_linked_list(head):
+    values = []
+    current = head
+    while current:
+        values.append(current.val)
+        current = current.next
+    print(values)
+
+# Test case
+values = [1,2,3,4,6,5]
+n = 2
+head = create_linked_list(values)
+
+print("Original Linked List:")
+print_linked_list(head)
+
+solution = Solution()
+result = solution.removeNthFromEnd(head,2)
+
+print("Linked List after removing duplicates:")
+print_linked_list(result)
