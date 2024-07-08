@@ -49,7 +49,7 @@ class Solution:
         for _ in range(n+1):
             first = first.next
         
-        # Move both pointers until first reaches the end
+        # Move both pointers until first reaches the end (len - n)
         # second will then point to the node just before the one to be removed
         while first:
             first = first.next
