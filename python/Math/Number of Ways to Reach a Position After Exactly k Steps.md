@@ -66,7 +66,8 @@ print(numberOfWays(1, 2, 3))  # Output: 3
 print(numberOfWays(2, 5, 10))  # Output: 0
 ```
 
-### Explanation:
+### Explanation
+
 1. **Feasibility Check**: First, we check if it is possible to reach `endPos` from `startPos` in exactly `k` steps based on the difference and parity.
 2. **Binomial Coefficient Calculation**: If it is feasible, we calculate the number of ways to distribute the steps using the binomial coefficient formula.
 3. **Modulo Operation**: Finally, we return the result modulo \(10^9 + 7\).
