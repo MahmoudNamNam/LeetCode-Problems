@@ -32,5 +32,3 @@ class Solution:
                 heappush(min_heap, (node.next.val, i, node.next))
         
         return dummy.next
-
-
