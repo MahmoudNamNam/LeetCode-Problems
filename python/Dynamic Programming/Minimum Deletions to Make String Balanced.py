@@ -15,3 +15,5 @@ sol =Solution()
 
 s = "aababbab"
 print(sol.minimumDeletions(s))
+s = "bbaaaaabb"
+print(sol.minimumDeletions(s))
