@@ -8,5 +8,5 @@ class Solution:
             if int(passenger[-4:-2])>60:
                 cnt+=1
         return cnt
-
-
+    
+    
