@@ -28,3 +28,11 @@ class Solution:
         end = self.binarySearch(nums, target, False)
         
         return [start, end]
+
+
+sol = Solution()
+nums = [5,7,7,8,8,10]
+target = 8
+
+print(sol.searchRange(nums, target))
+
