@@ -34,3 +34,33 @@ class Solution:
         
         # If no cycle exists, return None
         return None
+
+
+
+
+
+
+
+
+
+class Solution:
+    def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head or not head.next:
+            return None
+
+        seen = set()
+        
+        # Traverse the linked list
+        while head:
+            # If the current node is already in the set, we have a cycle
+            if head in seen:
+                return head
+            
+            # Otherwise, add the current node to the set
+            seen.add(head)
+            
+            # Move to the next node
+            head = head.next
+        
+        # If we reach the end of the list, there is no cycle
+        return None
