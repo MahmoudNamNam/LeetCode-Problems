@@ -19,6 +19,7 @@ class Solution:
         # - fast: moves two steps at a time
         slow = head
         fast = head.next
+
         
         # Traverse the linked list
         while fast and fast.next:
@@ -33,7 +34,6 @@ class Solution:
         
         # If we exit the loop, fast reached the end, meaning no cycle exists
         return False
-
 
 """"
 Let's walk through an example to see how the algorithm works.
@@ -115,6 +115,5 @@ Summary:
 - If there's no cycle, the `fast` pointer will reach the end of the list.
 
 """
-
 
 
