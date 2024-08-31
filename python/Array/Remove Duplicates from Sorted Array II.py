@@ -15,3 +15,10 @@ class Solution:
                 insert_pos += 1
         
         return insert_pos
+
+
+
+sol =  Solution()
+nums = [0,0,1,1,1,1,2,3,3]
+sol.removeDuplicates(nums)
+print(nums[:sol.removeDuplicates(nums)])
