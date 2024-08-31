@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         # Pointer for the position to place the next element in the final array
