@@ -10,7 +10,7 @@ class Solution:
             while r+1 < n and nums[r] == nums[r+1]:
                 r+=1
                 cnt+=1
-            for i in range(min(cnt,2)):
+            for _ in range(min(cnt,2)):
                 nums[l]=nums[r]
                 l+=1
             r+=1
@@ -18,3 +18,7 @@ class Solution:
 
 
 
+sol =  Solution()
+nums = [0,0,1,1,1,1,2,3,3]
+sol.removeDuplicates(nums)
+print(nums[:sol.removeDuplicates(nums)])
