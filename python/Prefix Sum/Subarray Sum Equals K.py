@@ -16,3 +16,7 @@ class Solution:
             else:
                 prefix[sm]=1
         return count
+
+
+sol = Solution()
+print(sol.subarraySum(nums = [1,2,3,0,4,5], k = 9))
