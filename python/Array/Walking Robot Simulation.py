@@ -25,8 +25,12 @@ class Solution:
                     if (new_x,new_y) not in obstacle_set:
                         x,y=new_x,new_y
                         max_distance = max(max_distance, x*x + y*y)
+                    else :
+                        break
         return max_distance
 
 sol = Solution()
 
-print(sol)
+print(sol.robotSim(commands = [4,-1,3], obstacles = []))
+print(sol.robotSim(commands = [4,-1,4,-2,4], obstacles = [[2,4]]))
+print(sol.robotSim(commands = [6,-1,-1,6], obstacles = []))
