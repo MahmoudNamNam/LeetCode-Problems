@@ -28,3 +28,20 @@ print(solution.topKFrequent(nums1, k1))  # Output: [1, 2]
 nums2 = [1]
 k2 = 1
 print(solution.topKFrequent(nums2, k2))  # Output: [1]
+
+
+
+
+from collections import Counter
+
+class Solution:
+    def topKFrequent(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+        counter = Counter(nums)
+        
+        # Extract only the elements, ignoring the frequencies
+        return [element for element, frequency in counter.most_common(k)]
