@@ -1,10 +1,14 @@
 from typing import Counter, List
 
 
+from collections import Counter
+
 class Solution:
     def uniqueOccurrences(self, arr: List[int]) -> bool:
         cnt = Counter(arr)
-        return len(cnt.values()) == len(set(cnt.values()))
+        freq = list(cnt.values()) 
+        return len(freq) == len(set(freq))
+
         
 sol = Solution()
 arr = [1,2,2,1,1,3]
