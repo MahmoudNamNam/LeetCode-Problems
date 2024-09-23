@@ -1,8 +1,8 @@
 class Solution:
     def precedence(self, op):
-        if op == '+' or op == '-': return 1
-        if op == '*' or op == '/': return 2
-        return 0
+        # Dictionary lookup is faster than multiple condition checks
+        precedences = {'+': 1, '-': 1, '*': 2, '/': 2}
+        return precedences.get(op, 0)
 
     def get_tokens(self, s):
         tokens = []
@@ -10,14 +10,15 @@ class Solution:
         num = ""
         for i in range(len(s)):
             if s[i].isdigit():
-                num += s[i]
+                num += s[i] # Collect digits for multi-digit numbers
             else:
                 if num:
                     tokens.append(num)
                     num = ""
                 if s[i] == ' ':
-                    continue
+                    continue # Skip spaces
                 else:
+                    # Pop operators with higher or equal precedence
                     while operators and self.precedence(operators[-1]) >= self.precedence(s[i]):
                         tokens.append(operators.pop())
                     operators.append(s[i])
