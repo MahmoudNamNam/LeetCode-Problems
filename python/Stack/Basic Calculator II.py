@@ -1,0 +1,61 @@
+class Solution:
+    def precedence(self, op):
+        if op == '+' or op == '-': return 1
+        if op == '*' or op == '/': return 2
+        return 0
+
+    def get_tokens(self, s):
+        tokens = []
+        operators = []
+        num = ""
+        for i in range(len(s)):
+            if s[i].isdigit():
+                num += s[i]
+            else:
+                if num:
+                    tokens.append(num)
+                    num = ""
+                if s[i] == ' ':
+                    continue
+                else:
+                    while operators and self.precedence(operators[-1]) >= self.precedence(s[i]):
+                        tokens.append(operators.pop())
+                    operators.append(s[i])
+        if num:
+            tokens.append(num)
+        while operators:
+            tokens.append(operators.pop())
+        return tokens
+
+    def calculate(self, s: str) -> int:
+        stack = []
+        tokens = self.get_tokens(s)
+        for token in tokens:
+            if token in '+-*/':
+                b = stack.pop()
+                a = stack.pop()
+                if token == '+':
+                    stack.append(a + b)
+                elif token == '-':
+                    stack.append(a - b)
+                elif token == '*':
+                    stack.append(a * b)
+                elif token == '/':
+                    stack.append(int(a / b)) 
+            else:
+                stack.append(int(token))
+        return stack[0]
+
+
+sol = Solution()
+s = "3+2*2"
+print(sol.get_tokens(s))
+print(sol.calculate(s))
+
+s = " 3/2 "
+print(sol.get_tokens(s))
+print(sol.calculate(s))
+
+s = " 3+5 / 2 "
+print(sol.get_tokens(s))
+print(sol.calculate(s))
