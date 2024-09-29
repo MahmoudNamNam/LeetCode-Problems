@@ -23,3 +23,4 @@ class Solution:
 sol =Solution()
 
 print(sol.predictPartyVictory(senate = "RD"))
+print(sol.predictPartyVictory(senate = "RDD"))
