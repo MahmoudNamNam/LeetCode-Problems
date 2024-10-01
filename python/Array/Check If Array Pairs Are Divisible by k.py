@@ -20,3 +20,7 @@ class Solution:
                 return False
         
         return True
+    
+sol = Solution()
+print(sol.canArrange(arr = [1,2,3,4,5,10,6,7,8,9], k = 5))
+# print(sol.canArrange())
