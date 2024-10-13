@@ -16,3 +16,15 @@ class Solution:
         right_depth = self.maxDepth(node.right)
         
         return 1 + max(left_depth, right_depth)
+
+
+root = TreeNode(4)
+root.left = TreeNode(2)
+root.right = TreeNode(7)
+root.left.left = TreeNode(1)
+root.left.right = TreeNode(3)
+root.left.right= TreeNode(15)
+root.right.right = TreeNode(9)
+
+sol = Solution()
+print(sol.maxDepth(root))
