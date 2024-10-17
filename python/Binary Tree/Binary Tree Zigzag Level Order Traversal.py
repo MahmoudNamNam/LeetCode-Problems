@@ -17,23 +17,24 @@ class Solution:
         level = 0
 
         while nodes_queue:
-            temp = []
+            temp = deque()
             sz = len(nodes_queue)
 
             for _ in range(sz):
                 cur = nodes_queue.popleft()
-                temp.append(cur.val)  
+                if level %2:
+                    temp.appendleft(cur.val)
+                else:
+                    temp.append(cur.val)  
 
                 if cur.left:
                     nodes_queue.append(cur.left)
                 if cur.right:
                     nodes_queue.append(cur.right)
 
-            # Reverse the order for odd levels
-            if level % 2 == 1:
-                temp.reverse()
+
             
-            result.append(temp)
+            result.append(list(temp))
             level += 1  
 
         return result
