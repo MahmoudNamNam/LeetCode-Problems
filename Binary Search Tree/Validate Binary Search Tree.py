@@ -15,3 +15,21 @@ class Solution:
         
         return (self.isValidBST(root.left, low, root.val) and
                 self.isValidBST(root.right, root.val, high))
+
+
+class Solution:
+    def inorderTraversal(self, root: Optional[TreeNode], result: Optional[List[int]] = None) -> List[int]:
+        if result is None:
+            result = []
+        # In-order: Left, Root, Right
+        if root:
+            self.inorderTraversal(root.left, result)
+            result.append(root.val)
+            self.inorderTraversal(root.right, result)
+        return result
+    def isValidBST(self, root: Optional[TreeNode], low=float('-inf'), high=float('inf')) -> bool:
+        lst = self.inorderTraversal(root)
+        for idx in range(1,len(lst)):
+            if lst[idx-1]>=lst[idx]:
+                return False
+        return True
