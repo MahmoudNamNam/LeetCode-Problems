@@ -19,3 +19,7 @@ class Solution:
                 count += end - start + 1
         
         return count
+    
+sol = Solution()
+print(sol.countFairPairs(nums = [0,1,7,4,4,5], lower = 3, upper = 6))
+print(sol.countFairPairs(nums = [1,7,9,2,5], lower = 11, upper = 11))
