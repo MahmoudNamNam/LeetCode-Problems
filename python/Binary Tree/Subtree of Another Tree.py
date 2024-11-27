@@ -16,7 +16,12 @@ class Solution:
                 return False
             if root.val != subRoot.val:
                 return False
-            return isSame(root.left, subRoot.left) and isSame(root.right, subRoot.right)
+            if not isSame(root.left, subRoot.left):
+                return False
+            if not isSame(root.right, subRoot.right):
+                return False
+            
+            return  True 
         
         def isSubtreeRec(root, subRoot):
             if not root:
