@@ -16,9 +16,7 @@ class Solution:
                 return False
             if root.val != subRoot.val:
                 return False
-            if not isSame(root.left, subRoot.left):
-                return False
-            if not isSame(root.right, subRoot.right):
+            if not isSame(root.left, subRoot.left) or not isSame(root.right, subRoot.right):
                 return False
             
             return  True 
