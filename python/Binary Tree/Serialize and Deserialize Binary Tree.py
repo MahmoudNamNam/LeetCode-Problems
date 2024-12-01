@@ -56,3 +56,29 @@ class Codec:
 # ser = Codec()
 # deser = Codec()
 # ans = deser.deserialize(ser.serialize(root))
+
+
+# Create a sample binary tree
+root = TreeNode(1)
+root.left = TreeNode(2)
+root.right = TreeNode(3)
+root.right.left = TreeNode(4)
+root.right.right = TreeNode(5)
+"""
+       1
+      / \
+     2   3
+        / \
+       4   5
+
+"""
+
+# Instantiate Codec and test
+ser = Codec()
+deser = Codec()
+
+serialized_data = ser.serialize(root)
+print("Serialized:", serialized_data)  # Output: "1,2,3,#,#,4,5"
+
+deserialized_tree = deser.deserialize(serialized_data)
+print("Root value after deserialization:", deserialized_tree.val)  # Output: 1
